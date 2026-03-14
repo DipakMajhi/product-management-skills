@@ -1,0 +1,19 @@
+{
+  "name": "pm-data-analytics",
+  "version": "1.0.0",
+  "description": "Data analytics skills for PMs: SQL query generation for BigQuery and PostgreSQL, A/B test design and analysis, and cohort retention analysis.",
+  "author": {
+    "name": "Dipak Majhi",
+    "url": "https://mypminterview.com"
+  },
+  "keywords": [
+    "product-management",
+    "sql",
+    "ab-testing",
+    "cohort-analysis",
+    "data",
+    "analytics"
+  ],
+  "homepage": "https://github.com/DipakMajhi/product-management-skills",
+  "license": "MIT"
+}

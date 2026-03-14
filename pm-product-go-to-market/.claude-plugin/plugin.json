@@ -1,0 +1,18 @@
+{
+  "name": "pm-product-go-to-market",
+  "version": "1.0.0",
+  "description": "Go-to-market strategy: beachhead segment identification, ideal customer profile definition, GTM motion selection, and launch planning.",
+  "author": {
+    "name": "Dipak Majhi",
+    "url": "https://mypminterview.com"
+  },
+  "keywords": [
+    "product-management",
+    "gtm",
+    "icp",
+    "launch",
+    "go-to-market"
+  ],
+  "homepage": "https://github.com/DipakMajhi/product-management-skills",
+  "license": "MIT"
+}
