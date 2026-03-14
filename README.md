@@ -1,6 +1,6 @@
 # PM Skills Repository
 
-A complete Product Management skills suite for Claude. 10 plugins, 45 skills, and 46 commands covering the full PM lifecycle.
+A complete Product Management skills suite for Claude. 45 skills and 46 commands covering the full PM lifecycle.
 
 Compatible with Claude Cowork (desktop) and Claude Code (CLI).
 
@@ -10,10 +10,8 @@ Built by [Dipak Majhi](https://mypminterview.com) for practicing PMs, PM intervi
 
 ## Repository Structure
 
-Every plugin follows this layout:
-
 ```
-pm-plugin-name/
+product-management-skills/
 ├── .claude-plugin/
 │   └── plugin.json        # Plugin manifest
 ├── skills/
@@ -36,56 +34,116 @@ pm-plugin-name/
 4. Click **+** then **Add marketplace from GitHub**
 5. Enter: `DipakMajhi/product-management-skills`
 
-All 10 plugins install automatically.
-
 ### Claude Code (CLI)
 
 ```bash
 claude plugin marketplace add DipakMajhi/product-management-skills
-
-claude plugin install pm-toolkit@product-management-skills
-claude plugin install pm-product-strategy@product-management-skills
-claude plugin install pm-product-discovery@product-management-skills
-claude plugin install pm-market-research@product-management-skills
-claude plugin install pm-data-analytics@product-management-skills
-claude plugin install pm-marketing-growth@product-management-skills
-claude plugin install pm-product-go-to-market@product-management-skills
-claude plugin install pm-product-execution@product-management-skills
-claude plugin install pm-product-design@product-management-skills
-claude plugin install pm-product-improvement@product-management-skills
+claude plugin install pm-skills@product-management-skills
 ```
 
 ### Other AI Assistants (Universal SKILL.md format)
 
 ```bash
 # Copy all skills to Gemini CLI
-for plugin in pm-*/; do
-  cp -r "${plugin}skills/"* ~/.gemini/skills/ 2>/dev/null
-done
+cp -r skills/* ~/.gemini/skills/ 2>/dev/null
 
 # Copy all skills to Cursor (project-level)
-for plugin in pm-*/; do
-  mkdir -p .cursor/skills/
-  cp -r "${plugin}skills/"* .cursor/skills/ 2>/dev/null
-done
+mkdir -p .cursor/skills/
+cp -r skills/* .cursor/skills/ 2>/dev/null
 ```
 
 ---
 
-## Available Plugins
+## Available Skills & Commands
 
-| Plugin | Skills | Commands | What It Covers |
-|---|---|---|---|
-| pm-toolkit | 7 | 7 | Resume, career, interview, NDA, proofreading |
-| pm-product-strategy | 8 | 7 | Vision, strategy canvas, competitive analysis, business models, pricing, market sizing |
-| pm-product-discovery | 5 | 5 | Opportunity mapping, user interviews, assumption testing, prioritization |
-| pm-market-research | 4 | 4 | Personas, journey maps, competitor profiling, feedback analysis |
-| pm-data-analytics | 3 | 3 | SQL queries, A/B testing, cohort analysis |
-| pm-marketing-growth | 3 | 3 | Positioning, North Star Metric, growth loops |
-| pm-product-go-to-market | 2 | 3 | GTM strategy, ICP definition, launch planning |
-| pm-product-execution | 7 | 8 | PRDs, OKRs, roadmaps, user stories, sprints, stakeholder maps, metrics |
-| pm-product-design | 3 | 3 | Design thinking, UX critique, design briefs |
-| pm-product-improvement | 3 | 4 | Retention diagnosis, funnel optimization, product iteration |
+### Strategy
+| Skill | Command | What It Does |
+|---|---|---|
+| product-vision | `/vision` | Craft a clear product vision |
+| product-strategy-canvas | `/strategy` | Build a complete strategy canvas |
+| competitive-analysis | `/competitive-scan` | Map and analyze competitors |
+| business-model | `/business-model` | Design or critique a business model |
+| pricing-strategy | `/pricing` | Build a pricing strategy |
+| market-sizing | `/market-size` | Estimate TAM, SAM, and SOM |
+| strategic-frameworks | — | Apply SWOT, Porter's Five Forces, and more |
+| value-proposition | — | Define your value proposition |
+
+### Discovery
+| Skill | Command | What It Does |
+|---|---|---|
+| continuous-discovery | `/discover` | Run ongoing opportunity discovery |
+| user-interview | `/interview` | Plan and run user interviews |
+| assumption-testing | `/brainstorm` | Surface and test key assumptions |
+| prioritization | `/prioritize` | Score and rank opportunities |
+| feature-request-analysis | `/triage-requests` | Analyse incoming feature requests |
+
+### Market Research
+| Skill | Command | What It Does |
+|---|---|---|
+| user-personas | `/research-users` | Build research-backed user personas |
+| customer-journey-map | `/journey-map` | Map the end-to-end user journey |
+| competitor-intelligence | `/profile-competitor` | Deep-dive a single competitor |
+| sentiment-analysis | `/analyze-feedback` | Analyse qualitative feedback at scale |
+
+### Data & Analytics
+| Skill | Command | What It Does |
+|---|---|---|
+| sql-for-pms | `/write-query` | Write SQL queries for product data |
+| ab-testing | `/analyze-test` | Design and interpret A/B tests |
+| cohort-analysis | `/analyze-cohorts` | Run cohort retention analysis |
+
+### Marketing & Growth
+| Skill | Command | What It Does |
+|---|---|---|
+| positioning | `/market-product` | Write positioning and messaging |
+| north-star-metric | `/north-star` | Define your North Star Metric |
+| growth-loops | `/growth-strategy` | Design compounding growth loops |
+
+### Go-to-Market
+| Skill | Command | What It Does |
+|---|---|---|
+| gtm-strategy | `/plan-launch` | Plan a full product launch |
+| icp-builder | `/define-icp` | Define your Ideal Customer Profile |
+| — | `/battlecard` | Create a competitive battlecard |
+
+### Execution
+| Skill | Command | What It Does |
+|---|---|---|
+| prd-writer | `/write-prd` | Write a complete 8-section PRD |
+| okr-planner | `/plan-okrs` | Write focused OKRs |
+| roadmap-builder | `/roadmap` | Build a prioritised roadmap |
+| user-stories | `/write-stories` | Convert PRDs into sprint-ready stories |
+| sprint-management | `/sprint-plan` | Plan and run a sprint |
+| stakeholder-management | `/stakeholder-map` | Map stakeholders and build alignment |
+| metrics-framework | `/define-metrics` | Define success metrics |
+| — | `/retro` | Run a sprint retrospective |
+
+### Design
+| Skill | Command | What It Does |
+|---|---|---|
+| design-thinking | `/design-sprint` | Run a design thinking sprint |
+| ux-critique | `/critique-design` | Critique a design or flow |
+| design-brief | `/write-brief` | Write a design brief |
+
+### Improvement
+| Skill | Command | What It Does |
+|---|---|---|
+| retention-analysis | `/improve-retention` | Diagnose and fix retention problems |
+| funnel-optimization | `/optimize-funnel` | Find and fix funnel drop-offs |
+| product-iteration | `/iterate` | Run structured product iteration |
+| — | `/improve-product` | Answer "How would you improve X?" |
+
+### Toolkit
+| Skill | Command | What It Does |
+|---|---|---|
+| interview-prep-coach | `/interview-prep` | Prep for PM interviews |
+| pm-career-ladder | `/career-growth` | Plan your PM career growth |
+| review-resume | `/review-resume` | Get feedback on your PM resume |
+| tailor-resume | `/tailor-resume` | Tailor your resume to a job description |
+| grammar-check | `/proofread` | Proofread and fix grammar |
+| draft-nda | `/draft-nda` | Draft a basic NDA |
+| privacy-policy | — | Draft a privacy policy |
+| — | `/career-check` | Audit where you are in your PM career |
 
 ---
 
@@ -93,31 +151,31 @@ done
 
 **Preparing for a PM interview:**
 ```
-/pm-toolkit:interview-prep
-/pm-product-improvement:improve-product Spotify
-/pm-product-strategy:strategy AI writing assistant for non-native English speakers
+/interview-prep
+/improve-product Spotify
+/strategy AI writing assistant for non-native English speakers
 ```
 
 **Starting a new product:**
 ```
-/pm-product-strategy:strategy
-/pm-product-discovery:discover
-/pm-product-execution:write-prd
-/pm-product-go-to-market:plan-launch
+/strategy
+/discover
+/write-prd
+/plan-launch
 ```
 
 **Improving an existing product:**
 ```
-/pm-market-research:analyze-feedback
-/pm-product-improvement:improve-retention
-/pm-product-improvement:optimize-funnel
+/analyze-feedback
+/improve-retention
+/optimize-funnel
 ```
 
 **Job search:**
 ```
-/pm-toolkit:review-resume
-/pm-toolkit:tailor-resume
-/pm-toolkit:career-growth
+/review-resume
+/tailor-resume
+/career-growth
 ```
 
 ---

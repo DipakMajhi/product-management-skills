@@ -27,12 +27,11 @@ Every command must:
 
 - Skills: lowercase kebab-case nouns (`prd-writer`, `user-personas`)
 - Commands: lowercase kebab-case verbs (`write-prd`, `build-personas`)
-- No cross-plugin references in commands
 
 ## PR Process
 
 1. Fork the repository
-2. Create a branch: `feature/plugin-name-skill-name`
+2. Create a branch: `feature/skill-name` or `feature/command-name`
 3. Add the skill or command following the standards above
 4. Open a pull request with a description of what it does and what gap it fills
 5. Keep PRs focused — one skill or command per PR
