@@ -26,13 +26,14 @@ product-management-skills/
 
 ## Installation
 
-### Claude Cowork — Install from GitHub
+### Claude Cowork (Desktop)
 
-1. Open Claude Cowork (desktop app)
-2. Click **Customize** in the left sidebar
-3. Click **Browse plugins**
-4. Click **+** then **Add marketplace from GitHub**
-5. Enter: `DipakMajhi/product-management-skills`
+1. [Download the ZIP](https://github.com/DipakMajhi/product-management-skills/archive/refs/heads/main.zip) from this repository
+2. Open Claude Cowork
+3. Click **Customize** in the left sidebar
+4. Click **+** beside **Personal Plugins**
+5. Upload the downloaded ZIP file
+6. Start using the commands and skills
 
 ### Claude Code (CLI)
 
