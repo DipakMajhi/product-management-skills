@@ -5,4 +5,4 @@ argument-hint: "[describe your current role, responsibilities, and career goal]"
 
 Load the pm-career-ladder skill and conduct a full PM career assessment.
 
-After completing, suggest: "If you are preparing for interviews at your target level, use /interview-prep to practice."
+After completing, suggest: "If you are preparing for interviews at your target level, use /interview-prep-coach to practice the question types most common at that level."

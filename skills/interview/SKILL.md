@@ -1,11 +1,21 @@
 ---
-description: Prepare a user interview script or synthesize interview notes into insights
-argument-hint: "[prep: describe the problem space | synthesize: paste your interview notes or transcript]"
+name: interview
+description: "Prepare user interview scripts or synthesize interview notes. Routes to the user-research skill Mode A."
 ---
 
-Load the user-interview skill.
+# Interview
 
-If the user wants to prepare: design a complete interview script.
-If the user wants to synthesize: extract JTBD statements, pain points, and opportunity candidates from the provided notes.
+This skill routes to **user-research** Mode A (User Interviews).
 
-Ask the user which mode they need if not specified.
+**What user-research Mode A covers:**
+- Interview design (7 core principles)
+- Past-behavior question technique (not hypotheticals)
+- Probe sequence for depth: surface → behavior → motivation → emotion → consequence
+- JTBD extraction ("When…I want to…so I can…")
+- Recruitment criteria and screener design
+- Interview guide template
+- Synthesis framework: raw notes → themes → insights → opportunities
+
+Load the full skill: **user-research**
+
+Apply your interview context to: $ARGUMENTS

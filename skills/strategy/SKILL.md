@@ -1,8 +1,21 @@
 ---
-description: Build a complete product strategy canvas for your product
-argument-hint: "[describe your product, market, and any existing strategy context]"
+name: strategy
+description: "Build a complete product strategy canvas. Routes to the product-strategy-canvas skill."
 ---
 
-Load the product-strategy-canvas skill and build a full 9-section strategy canvas based on the user's input.
+# Strategy
 
-After completing, suggest: "Next steps: use /vision to sharpen your vision statement, or /competitive-scan for a deeper competitive analysis."
+This skill routes to **product-strategy-canvas**, which provides a comprehensive product strategy framework.
+
+**What product-strategy-canvas covers:**
+- Market opportunity sizing and framing
+- Target customer and ICP definition
+- Strategic bets and differentiation thesis
+- Where to play / how to win framework
+- Three Horizons portfolio allocation
+- OKR alignment and execution bridge
+- Strategy narrative for executive communication
+
+Load the full skill: **product-strategy-canvas**
+
+Apply your strategy context to: $ARGUMENTS

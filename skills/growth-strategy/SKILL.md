@@ -1,6 +1,20 @@
 ---
-description: Design growth loops and identify the most leveraged growth opportunities for your product
-argument-hint: "[describe your product, current user base, and primary growth challenge]"
+name: growth-strategy
+description: "Design growth loops and identify growth opportunities. Routes to the growth-loops skill."
 ---
 
-Load the growth-loops skill. Map the primary loop, identify break points, and recommend interventions ranked by expected impact and effort.
+# Growth Strategy
+
+This skill routes to **growth-loops**, which provides a complete sustainable growth design framework.
+
+**What growth-loops covers:**
+- Growth loop vs. linear funnel distinction
+- Viral, retention, and paid acquisition loops
+- Flywheel design and compounding effects
+- Growth lever identification and prioritization
+- AARRR framework overlay
+- Experiment design for growth loops
+
+Load the full skill: **growth-loops**
+
+Apply your growth context to: $ARGUMENTS

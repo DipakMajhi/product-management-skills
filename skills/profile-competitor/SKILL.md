@@ -1,8 +1,20 @@
 ---
-description: Build a deep competitor profile with positioning, pricing, and strategic implications
-argument-hint: "[name the competitor you want to profile and your product context]"
+name: profile-competitor
+description: "Build a deep competitor profile. Routes to the competitive-intelligence skill Mode B."
 ---
 
-Load the competitor-intelligence skill and build a complete competitor profile.
+# Profile Competitor
 
-After completing, suggest: "Use /competitive-scan in pm-product-strategy for a broader landscape map."
+This skill routes to **competitive-intelligence** Mode B (Deep Competitor Profile).
+
+**What competitive-intelligence Mode B covers:**
+- Product depth analysis (features, UX, gaps)
+- Pricing and packaging intelligence
+- GTM and positioning strategy
+- Funding, growth signals, and hiring signals
+- Evidence-based strengths/weaknesses (not conjecture)
+- Strategic implications and recommended responses
+
+Load the full skill: **competitive-intelligence**
+
+Apply your competitor context to: $ARGUMENTS

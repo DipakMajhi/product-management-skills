@@ -1,10 +1,20 @@
 ---
-description: Diagnose and design a plan to improve product retention
-argument-hint: "[describe your product and share any retention data or patterns you have observed]"
+name: improve-retention
+description: "Diagnose and improve product retention. Routes to the retention-toolkit skill."
 ---
 
-Load the retention-analysis skill. If the user has cohort data, load the cohort-analysis skill from pm-data-analytics as well and cross-reference.
+# Improve Retention
 
-Produce a retention diagnosis and prioritized intervention plan.
+This skill routes to **retention-toolkit** Mode A (Retention Diagnosis).
 
-After completing, suggest: "Use /optimize-funnel to improve the onboarding funnel that is most likely blocking activation."
+**What retention-toolkit covers:**
+- Retention curve shape diagnosis (5 patterns)
+- Activation moment identification
+- Cohort analysis (retention, feature adoption, revenue, behavioral)
+- Intervention design by retention stage
+- Retention benchmarks by product type
+- SQL cohort query templates
+
+Load the full skill: **retention-toolkit**
+
+Apply your retention context to: $ARGUMENTS

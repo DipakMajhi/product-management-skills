@@ -1,6 +1,20 @@
 ---
-description: Map stakeholders and design a communication plan for a project or launch
-argument-hint: "[describe the project, initiative, or launch and the key stakeholders involved]"
+name: stakeholder-map
+description: "Map stakeholders and design a communication plan. Routes to the stakeholder-management skill."
 ---
 
-Load the stakeholder-management skill and produce a complete stakeholder map, RACI matrix, and communication plan.
+# Stakeholder Map
+
+This skill routes to **stakeholder-management**, which provides a complete stakeholder strategy framework.
+
+**What stakeholder-management covers:**
+- Power/Interest grid mapping
+- RACI design
+- Communication cadence planning
+- Handling difficult stakeholder scenarios
+- Influence strategy by stakeholder type
+- Escalation path design
+
+Load the full skill: **stakeholder-management**
+
+Apply your stakeholder context to: $ARGUMENTS
