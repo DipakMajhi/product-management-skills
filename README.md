@@ -1,4 +1,4 @@
-# PM Skills Plugin
+# Product Management Skills Plugin
 
 A comprehensive Product Management skills suite for Claude. 90 skills covering the full PM lifecycle, from strategy and discovery through execution, growth, analytics, design, career development, and legal.
 
