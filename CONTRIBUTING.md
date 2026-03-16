@@ -15,18 +15,10 @@ Every skill must:
 - Use `$ARGUMENTS` as the placeholder for user input
 - Not reference or reproduce content from other open-source repositories
 
-## Command Standards
-
-Every command must:
-- Have `description` and `argument-hint` in YAML frontmatter — no `name:` field
-- Live as a flat `.md` file in `commands/command-name.md`
-- Include `## Invocation`, `## Workflow`, and `## Notes` sections
-- Reference the skill(s) it applies by name in the Workflow section
-
 ## Naming Conventions
 
 - Skills: lowercase kebab-case nouns (`prd-writer`, `user-personas`)
-- Commands: lowercase kebab-case verbs (`write-prd`, `build-personas`)
+- Router commands (short skills that invoke a parent skill): lowercase kebab-case verbs (`write-prd`, `build-personas`)
 
 ## PR Process
 
