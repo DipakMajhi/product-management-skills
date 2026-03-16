@@ -1,6 +1,6 @@
 # Product Management Skills Plugin
 
-A comprehensive Product Management skills suite for Claude. 40 expert skills and 40 shortcut commands covering the full PM lifecycle, from strategy and discovery through execution, growth, analytics, design, career development, and legal.
+A comprehensive Product Management skills suite for Claude. 40 expert skills and 43 shortcut commands covering the full PM lifecycle, from strategy and discovery through execution, growth, analytics, design, career development, and legal.
 
 Each skill contains expert-level frameworks, named methodologies with attribution, worked examples, anti-patterns, and structured output templates.
 
@@ -87,8 +87,8 @@ Most skills accept an argument describing the product, feature, or context. For 
 | business-model | `/business-model` | Design or stress-test a business model with BMC, Lean Canvas, and unit economics |
 | pricing-strategy | `/pricing` | Build pricing strategy using value-based, competition-based, and cost-plus models |
 | market-sizing | `/market-size` | Estimate TAM, SAM, and SOM using top-down, bottom-up, and Fermi techniques |
-| strategic-frameworks | -- | Apply 12 frameworks: SWOT/TOWS, PESTLE, Porter's Five Forces, Ansoff Matrix, and more |
-| value-proposition | -- | Define value proposition using JTBD, Strategyzer Canvas, and April Dunford's methodology |
+| strategic-frameworks | `/frameworks` | Apply 12 frameworks: SWOT/TOWS, PESTLE, Porter's Five Forces, Ansoff Matrix, and more |
+| value-proposition | `/value-prop` | Define value proposition using JTBD, Strategyzer Canvas, and April Dunford's methodology |
 
 ### Discovery (3 skills)
 
@@ -139,14 +139,13 @@ Most skills accept an argument describing the product, feature, or context. For 
 | stakeholder-management | `/stakeholder-map` | Map stakeholders with Mendelow's Power/Interest grid and design communication plans |
 | okr-planner | `/plan-okrs` | Write OKRs using John Doerr's methodology with CFR cadence |
 
-### Improvement (4 skills)
+### Improvement (3 skills)
 
 | Skill | Command | What It Does |
 |---|---|---|
 | retention-toolkit | `/improve-retention`, `/analyze-cohorts` | Retention diagnosis, cohort analysis, activation moment identification, and intervention design |
 | funnel-optimization | `/optimize-funnel` | Diagnose and optimize acquisition, onboarding, activation, and checkout funnels |
-| product-iteration | `/iterate` | Structured iteration using Build-Measure-Learn, PDCA/Deming cycle, and hypothesis-driven development |
-| -- | `/improve-product` | Answer "How would you improve X?" using a structured PM interview framework |
+| product-iteration | `/iterate`, `/improve-product` | Structured iteration using Build-Measure-Learn, PDCA/Deming cycle, and hypothesis-driven development |
 
 ### Design (3 skills)
 
@@ -156,7 +155,7 @@ Most skills accept an argument describing the product, feature, or context. For 
 | ux-critique | `/critique-design` | Evaluate UX using Nielsen's heuristics, Don Norman's principles, and cognitive load theory |
 | design-brief | `/write-brief` | Write design briefs with JTBD integration, constraint documentation, and collaboration models |
 
-### Career and Interview Prep (6 skills)
+### Career and Interview Prep (5 skills)
 
 | Skill | Command | What It Does |
 |---|---|---|
@@ -165,14 +164,13 @@ Most skills accept an argument describing the product, feature, or context. For 
 | review-resume | `/review-resume` | Score and review PM resumes with XYZ formula, ATS optimization, and level-specific feedback |
 | tailor-resume | `/tailor-resume` | Tailor resumes to job descriptions with JD decoding, mirror language, and ATS keyword strategy |
 | grammar-check | `/proofread` | Proofread PM writing with BLUF pattern, Minto Pyramid, and document-type-specific guidelines |
-| -- | `/improve-product` | Practice the "How would you improve X?" PM interview question format |
 
 ### Legal (2 skills)
 
 | Skill | Command | What It Does |
 |---|---|---|
 | draft-nda | `/draft-nda` | Draft NDAs with clause-by-clause guidance, carve-outs, remedies, and complete templates |
-| privacy-policy | -- | Draft privacy policies covering GDPR, CCPA/CPRA, COPPA, LGPD, PIPEDA, and Privacy by Design |
+| privacy-policy | `/draft-privacy-policy` | Draft privacy policies covering GDPR, CCPA/CPRA, COPPA, LGPD, PIPEDA, and Privacy by Design |
 
 ---
 
