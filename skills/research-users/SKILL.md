@@ -1,8 +1,21 @@
 ---
-description: Build user personas, map the customer journey, and understand your target segments
+name: research-users
+description: "Build user personas, map the customer journey, and understand your target segments. Routes to the user-research skill Mode B."
 argument-hint: "[describe your product and any user research or data you have]"
 ---
 
-Load the user-personas skill. Build personas first, then offer to map the customer journey for the primary persona using the customer-journey-map skill.
+# Research Users
 
-After completing, suggest: "Use /analyze-feedback to add the voice of your customers to these personas."
+This skill routes to **user-research** Mode B (User Personas and Segmentation).
+
+**What user-research Mode B covers:**
+- Persona definition from interview synthesis
+- Segmentation and targeting strategy
+- Customer archetype mapping
+- Behavioral patterns and motivations
+- Primary and secondary personas
+- Data-driven segment prioritization
+
+Load the full skill: **user-research**
+
+Apply your user research context to: $ARGUMENTS

@@ -1,6 +1,6 @@
 # Product Management Skills Plugin
 
-A comprehensive Product Management skills suite for Claude. 90 skills covering the full PM lifecycle, from strategy and discovery through execution, growth, analytics, design, career development, and legal.
+A comprehensive Product Management skills suite for Claude. 40 expert skills and 40 shortcut commands covering the full PM lifecycle, from strategy and discovery through execution, growth, analytics, design, career development, and legal.
 
 Each skill contains expert-level frameworks, named methodologies with attribution, worked examples, anti-patterns, and structured output templates.
 
@@ -90,54 +90,45 @@ Most skills accept an argument describing the product, feature, or context. For 
 | strategic-frameworks | -- | Apply 12 frameworks: SWOT/TOWS, PESTLE, Porter's Five Forces, Ansoff Matrix, and more |
 | value-proposition | -- | Define value proposition using JTBD, Strategyzer Canvas, and April Dunford's methodology |
 
-### Discovery (4 skills)
+### Discovery (3 skills)
 
 | Skill | Command | What It Does |
 |---|---|---|
 | continuous-discovery | `/discover` | Run discovery using Teresa Torres' Opportunity Solution Trees and Marty Cagan's dual-track |
 | assumption-testing | `/brainstorm` | Map, score, and design pretotype tests for product assumptions |
 | prioritization | `/prioritize` | Score and rank with RICE, ICE, MoSCoW, Kano, WSJF, and Eisenhower frameworks |
-| feature-request-analysis | `/triage-requests` | Categorize feature requests into themes and opportunities |
 
-### User Research (5 skills)
+### User Research (2 skills)
 
 | Skill | Command | What It Does |
 |---|---|---|
-| user-research | `/interview`, `/research-users` | Complete research suite: interview design, contextual inquiry, JTBD extraction, persona building |
-| user-personas | -- | Create evidence-based user personas with behavioral segmentation |
-| customer-journey-map | `/journey-map` | Map end-to-end journeys with stages, touchpoints, emotions, and opportunities |
-| user-interview | -- | Create interview scripts, run analysis, and extract JTBD insights |
-| voice-of-customer | `/triage-requests`, `/analyze-feedback` | Sentiment classification, theme extraction, JTBD mapping, and opportunity scoring |
+| user-research | `/interview`, `/research-users`, `/journey-map` | Complete research suite: interview design, contextual inquiry, JTBD extraction, persona building, journey mapping |
+| voice-of-customer | `/triage-requests`, `/analyze-feedback` | Sentiment classification, theme extraction, JTBD mapping, feature request triage, and opportunity scoring |
 
-### Competitive Intelligence (3 skills)
+### Competitive Intelligence (1 skill)
 
 | Skill | Command | What It Does |
 |---|---|---|
 | competitive-intelligence | `/competitive-scan`, `/profile-competitor`, `/battlecard` | Full suite: landscape mapping (Mode A), deep profiles (Mode B), battlecards (Mode C), win/loss (Mode D) |
-| competitive-analysis | -- | Structured competitive analysis with feature matrices and positioning maps |
-| competitor-intelligence | -- | Deep single-competitor profiles with pricing, positioning, and strategic implications |
 
-### Data and Analytics (5 skills)
+### Data and Analytics (3 skills)
 
 | Skill | Command | What It Does |
 |---|---|---|
 | sql-for-pms | `/write-query` | Generate SQL for 25+ PM query patterns across BigQuery, PostgreSQL, MySQL, and Snowflake |
 | ab-testing | `/analyze-test` | Design experiments, calculate sample size, and interpret results with Ship/Iterate/Stop framework |
-| cohort-analysis | `/analyze-cohorts` | Design and interpret cohort retention and engagement analyses |
-| metrics-and-okrs | `/define-metrics`, `/plan-okrs`, `/north-star` | North Star definition, HEART/AARRR frameworks, metric trees, OKR writing with Doerr methodology |
-| metrics-framework | -- | Define metrics framework with North Star, input metrics, guardrails, and measurement plan |
+| metrics-and-okrs | `/define-metrics`, `/plan-okrs`, `/north-star`, `/analyze-cohorts` | North Star definition, HEART/AARRR frameworks, metric trees, OKR writing with Doerr methodology |
 
-### Marketing and Growth (5 skills)
+### Marketing and Growth (4 skills)
 
 | Skill | Command | What It Does |
 |---|---|---|
 | positioning | `/market-product` | Product positioning using Geoffrey Moore template and Al Ries/Jack Trout laws |
 | growth-loops | `/growth-strategy` | Design growth loops using Reforge methodology, Andrew Chen, and Casey Winters frameworks |
-| north-star-metric | `/north-star` | Define North Star Metric with Business Game classification and input metric hierarchy |
 | gtm-strategy | `/plan-launch` | Complete go-to-market strategy with beachhead selection (Geoffrey Moore) and launch planning |
 | icp-builder | `/define-icp` | Define Ideal Customer Profile with scoring methodology, data sources, and ABM integration |
 
-### Execution (9 skills)
+### Execution (6 skills)
 
 | Skill | Command | What It Does |
 |---|---|---|
@@ -147,9 +138,6 @@ Most skills accept an argument describing the product, feature, or context. For 
 | sprint-lifecycle | `/sprint-plan`, `/retro` | Complete sprint toolkit: planning, capacity estimation, retrospectives, and release notes |
 | stakeholder-management | `/stakeholder-map` | Map stakeholders with Mendelow's Power/Interest grid and design communication plans |
 | okr-planner | `/plan-okrs` | Write OKRs using John Doerr's methodology with CFR cadence |
-| sprint-management | -- | Sprint planning with capacity estimation, retro facilitation, and release notes |
-| retention-analysis | -- | Diagnose retention problems and design targeted interventions |
-| sentiment-analysis | -- | Analyze feedback, reviews, and NPS comments for sentiment patterns |
 
 ### Improvement (4 skills)
 

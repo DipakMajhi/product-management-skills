@@ -1,10 +1,19 @@
 ---
-description: Run a sprint retrospective or write release notes
+name: retro
+description: "Run a sprint retrospective or write release notes. Routes to the sprint-lifecycle skill."
 argument-hint: "[retro: describe what happened this sprint | release-notes: paste your list of shipped tickets]"
 ---
 
-Load the sprint-management skill.
+# Retrospective
 
-If running a retro: ask which format the user prefers (Start/Stop/Continue, 4Ls, or Sailboat), facilitate the structure, and produce a list of action items.
+This skill routes to **sprint-lifecycle** (Sprint Retrospective and Release Notes).
 
-If writing release notes: transform the provided ticket list into user-facing release notes.
+**What sprint-lifecycle retro mode covers:**
+- Retrospective facilitation (Start/Stop/Continue, 4Ls, Sailboat formats)
+- Action item extraction and prioritization
+- Team velocity and capacity reflection
+- Release notes generation from shipped tickets
+
+Load the full skill: **sprint-lifecycle**
+
+Apply your sprint context to: $ARGUMENTS
