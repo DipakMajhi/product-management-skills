@@ -1,6 +1,8 @@
-# PM Skills Repository
+# PM Skills Plugin
 
-A complete Product Management skills suite for Claude. 45 skills and 46 commands covering the full PM lifecycle.
+A comprehensive Product Management skills suite for Claude. 90 skills covering the full PM lifecycle, from strategy and discovery through execution, growth, analytics, design, career development, and legal.
+
+Each skill contains expert-level frameworks, named methodologies with attribution, worked examples, anti-patterns, and structured output templates.
 
 Compatible with Claude Cowork (desktop) and Claude Code (CLI).
 
@@ -12,15 +14,15 @@ Built by [Dipak Majhi](https://mypminterview.com) for practicing PMs, PM intervi
 
 ```
 product-management-skills/
-├── .claude-plugin/
-│   └── plugin.json        # Plugin manifest
-├── skills/
-│   └── skill-name/
-│       └── SKILL.md       # Skill instructions
-├── commands/
-│   └── command-name.md    # Slash command definitions
-└── README.md
+  .claude-plugin/
+    plugin.json          # Plugin manifest
+  skills/
+    skill-name/
+      SKILL.md           # Skill instructions (150-800+ lines each)
+  README.md
 ```
+
+Skills are organized as directories under `skills/`. Each directory contains a `SKILL.md` file with YAML frontmatter and detailed instructions. Short "router" skills delegate to comprehensive parent skills for specific modes of operation.
 
 ---
 
@@ -33,7 +35,7 @@ product-management-skills/
 3. Click **Customize** in the left sidebar
 4. Click **+** beside **Personal Plugins**
 5. Upload the downloaded ZIP file
-6. Start using the commands and skills
+6. Start using the skills
 
 ### Claude Code (CLI)
 
@@ -55,96 +57,134 @@ cp -r skills/* .cursor/skills/ 2>/dev/null
 
 ---
 
-## Available Skills & Commands
+## How to Use
 
-### Strategy
+There are two ways to invoke skills:
+
+**1. Slash commands** -- type a short command name and Claude routes to the right skill. For example, `/write-prd` invokes the `prd-writer` skill.
+
+**2. Natural language** -- describe what you need and Claude matches the appropriate skill automatically. For example, "Help me define my North Star Metric" invokes the `metrics-and-okrs` skill.
+
+Most skills accept an argument describing the product, feature, or context. For example:
+
+```
+/write-prd in-app collaboration for a project management tool
+/strategy AI writing assistant for non-native English speakers
+/pricing B2B developer tools platform
+```
+
+---
+
+## Skills Reference
+
+### Strategy (8 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| product-vision | `/vision` | Craft a clear product vision |
-| product-strategy-canvas | `/strategy` | Build a complete strategy canvas |
-| competitive-analysis | `/competitive-scan` | Map and analyze competitors |
-| business-model | `/business-model` | Design or critique a business model |
-| pricing-strategy | `/pricing` | Build a pricing strategy |
-| market-sizing | `/market-size` | Estimate TAM, SAM, and SOM |
-| strategic-frameworks | — | Apply SWOT, Porter's Five Forces, and more |
-| value-proposition | — | Define your value proposition |
+| product-strategy-canvas | `/strategy` | Build a complete strategy canvas using Playing to Win, Good Strategy Bad Strategy, and Rumelt's kernel |
+| product-vision | `/vision` | Craft a product vision using narrative, Press Release/FAQ, and one-sentence formats |
+| competitive-intelligence | `/competitive-scan`, `/profile-competitor`, `/battlecard` | Full competitive suite: landscape mapping, deep competitor profiling, and sales battlecards |
+| business-model | `/business-model` | Design or stress-test a business model with BMC, Lean Canvas, and unit economics |
+| pricing-strategy | `/pricing` | Build pricing strategy using value-based, competition-based, and cost-plus models |
+| market-sizing | `/market-size` | Estimate TAM, SAM, and SOM using top-down, bottom-up, and Fermi techniques |
+| strategic-frameworks | -- | Apply 12 frameworks: SWOT/TOWS, PESTLE, Porter's Five Forces, Ansoff Matrix, and more |
+| value-proposition | -- | Define value proposition using JTBD, Strategyzer Canvas, and April Dunford's methodology |
 
-### Discovery
+### Discovery (4 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| continuous-discovery | `/discover` | Run ongoing opportunity discovery |
-| user-interview | `/interview` | Plan and run user interviews |
-| assumption-testing | `/brainstorm` | Surface and test key assumptions |
-| prioritization | `/prioritize` | Score and rank opportunities |
-| feature-request-analysis | `/triage-requests` | Analyse incoming feature requests |
+| continuous-discovery | `/discover` | Run discovery using Teresa Torres' Opportunity Solution Trees and Marty Cagan's dual-track |
+| assumption-testing | `/brainstorm` | Map, score, and design pretotype tests for product assumptions |
+| prioritization | `/prioritize` | Score and rank with RICE, ICE, MoSCoW, Kano, WSJF, and Eisenhower frameworks |
+| feature-request-analysis | `/triage-requests` | Categorize feature requests into themes and opportunities |
 
-### Market Research
+### User Research (5 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| user-personas | `/research-users` | Build research-backed user personas |
-| customer-journey-map | `/journey-map` | Map the end-to-end user journey |
-| competitor-intelligence | `/profile-competitor` | Deep-dive a single competitor |
-| sentiment-analysis | `/analyze-feedback` | Analyse qualitative feedback at scale |
+| user-research | `/interview`, `/research-users` | Complete research suite: interview design, contextual inquiry, JTBD extraction, persona building |
+| user-personas | -- | Create evidence-based user personas with behavioral segmentation |
+| customer-journey-map | `/journey-map` | Map end-to-end journeys with stages, touchpoints, emotions, and opportunities |
+| user-interview | -- | Create interview scripts, run analysis, and extract JTBD insights |
+| voice-of-customer | `/triage-requests`, `/analyze-feedback` | Sentiment classification, theme extraction, JTBD mapping, and opportunity scoring |
 
-### Data & Analytics
+### Competitive Intelligence (3 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| sql-for-pms | `/write-query` | Write SQL queries for product data |
-| ab-testing | `/analyze-test` | Design and interpret A/B tests |
-| cohort-analysis | `/analyze-cohorts` | Run cohort retention analysis |
+| competitive-intelligence | `/competitive-scan`, `/profile-competitor`, `/battlecard` | Full suite: landscape mapping (Mode A), deep profiles (Mode B), battlecards (Mode C), win/loss (Mode D) |
+| competitive-analysis | -- | Structured competitive analysis with feature matrices and positioning maps |
+| competitor-intelligence | -- | Deep single-competitor profiles with pricing, positioning, and strategic implications |
 
-### Marketing & Growth
+### Data and Analytics (5 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| positioning | `/market-product` | Write positioning and messaging |
-| north-star-metric | `/north-star` | Define your North Star Metric |
-| growth-loops | `/growth-strategy` | Design compounding growth loops |
+| sql-for-pms | `/write-query` | Generate SQL for 25+ PM query patterns across BigQuery, PostgreSQL, MySQL, and Snowflake |
+| ab-testing | `/analyze-test` | Design experiments, calculate sample size, and interpret results with Ship/Iterate/Stop framework |
+| cohort-analysis | `/analyze-cohorts` | Design and interpret cohort retention and engagement analyses |
+| metrics-and-okrs | `/define-metrics`, `/plan-okrs`, `/north-star` | North Star definition, HEART/AARRR frameworks, metric trees, OKR writing with Doerr methodology |
+| metrics-framework | -- | Define metrics framework with North Star, input metrics, guardrails, and measurement plan |
 
-### Go-to-Market
+### Marketing and Growth (5 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| gtm-strategy | `/plan-launch` | Plan a full product launch |
-| icp-builder | `/define-icp` | Define your Ideal Customer Profile |
-| — | `/battlecard` | Create a competitive battlecard |
+| positioning | `/market-product` | Product positioning using Geoffrey Moore template and Al Ries/Jack Trout laws |
+| growth-loops | `/growth-strategy` | Design growth loops using Reforge methodology, Andrew Chen, and Casey Winters frameworks |
+| north-star-metric | `/north-star` | Define North Star Metric with Business Game classification and input metric hierarchy |
+| gtm-strategy | `/plan-launch` | Complete go-to-market strategy with beachhead selection (Geoffrey Moore) and launch planning |
+| icp-builder | `/define-icp` | Define Ideal Customer Profile with scoring methodology, data sources, and ABM integration |
 
-### Execution
+### Execution (9 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| prd-writer | `/write-prd` | Write a complete 8-section PRD |
-| okr-planner | `/plan-okrs` | Write focused OKRs |
-| roadmap-builder | `/roadmap` | Build a prioritised roadmap |
-| user-stories | `/write-stories` | Convert PRDs into sprint-ready stories |
-| sprint-management | `/sprint-plan` | Plan and run a sprint |
-| stakeholder-management | `/stakeholder-map` | Map stakeholders and build alignment |
-| metrics-framework | `/define-metrics` | Define success metrics |
-| — | `/retro` | Run a sprint retrospective |
+| prd-writer | `/write-prd` | Write comprehensive 8-section PRDs with problem statements, user stories, and success metrics |
+| roadmap-builder | `/roadmap` | Build roadmaps using Now/Next/Later (Janna Bastow), outcome-driven, and theme-based formats |
+| user-stories | `/write-stories` | Write stories with INVEST criteria, Jeff Patton story mapping, and BDD acceptance criteria |
+| sprint-lifecycle | `/sprint-plan`, `/retro` | Complete sprint toolkit: planning, capacity estimation, retrospectives, and release notes |
+| stakeholder-management | `/stakeholder-map` | Map stakeholders with Mendelow's Power/Interest grid and design communication plans |
+| okr-planner | `/plan-okrs` | Write OKRs using John Doerr's methodology with CFR cadence |
+| sprint-management | -- | Sprint planning with capacity estimation, retro facilitation, and release notes |
+| retention-analysis | -- | Diagnose retention problems and design targeted interventions |
+| sentiment-analysis | -- | Analyze feedback, reviews, and NPS comments for sentiment patterns |
 
-### Design
+### Improvement (4 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| design-thinking | `/design-sprint` | Run a design thinking sprint |
-| ux-critique | `/critique-design` | Critique a design or flow |
-| design-brief | `/write-brief` | Write a design brief |
+| retention-toolkit | `/improve-retention`, `/analyze-cohorts` | Retention diagnosis, cohort analysis, activation moment identification, and intervention design |
+| funnel-optimization | `/optimize-funnel` | Diagnose and optimize acquisition, onboarding, activation, and checkout funnels |
+| product-iteration | `/iterate` | Structured iteration using Build-Measure-Learn, PDCA/Deming cycle, and hypothesis-driven development |
+| -- | `/improve-product` | Answer "How would you improve X?" using a structured PM interview framework |
 
-### Improvement
+### Design (3 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| retention-analysis | `/improve-retention` | Diagnose and fix retention problems |
-| funnel-optimization | `/optimize-funnel` | Find and fix funnel drop-offs |
-| product-iteration | `/iterate` | Run structured product iteration |
-| — | `/improve-product` | Answer "How would you improve X?" |
+| design-thinking | `/design-sprint` | Apply IDEO 5-stage model, Stanford d.school methodology, and British Design Council Double Diamond |
+| ux-critique | `/critique-design` | Evaluate UX using Nielsen's heuristics, Don Norman's principles, and cognitive load theory |
+| design-brief | `/write-brief` | Write design briefs with JTBD integration, constraint documentation, and collaboration models |
 
-### Toolkit
+### Career and Interview Prep (6 skills)
+
 | Skill | Command | What It Does |
 |---|---|---|
-| interview-prep-coach | `/interview-prep` | Prep for PM interviews |
-| pm-career-ladder | `/career-growth` | Plan your PM career growth |
-| review-resume | `/review-resume` | Get feedback on your PM resume |
-| tailor-resume | `/tailor-resume` | Tailor your resume to a job description |
-| grammar-check | `/proofread` | Proofread and fix grammar |
-| draft-nda | `/draft-nda` | Draft a basic NDA |
-| privacy-policy | — | Draft a privacy policy |
-| — | `/career-check` | Audit where you are in your PM career |
+| interview-prep-coach | `/interview-prep` | PM interview coaching with CIRCLES method, company-specific patterns (Google, Meta, Amazon), and scoring rubrics |
+| pm-career-ladder | `/career-growth`, `/career-check` | Career progression with IC vs Management tracks, company ladder mappings, and promotion planning |
+| review-resume | `/review-resume` | Score and review PM resumes with XYZ formula, ATS optimization, and level-specific feedback |
+| tailor-resume | `/tailor-resume` | Tailor resumes to job descriptions with JD decoding, mirror language, and ATS keyword strategy |
+| grammar-check | `/proofread` | Proofread PM writing with BLUF pattern, Minto Pyramid, and document-type-specific guidelines |
+| -- | `/improve-product` | Practice the "How would you improve X?" PM interview question format |
+
+### Legal (2 skills)
+
+| Skill | Command | What It Does |
+|---|---|---|
+| draft-nda | `/draft-nda` | Draft NDAs with clause-by-clause guidance, carve-outs, remedies, and complete templates |
+| privacy-policy | -- | Draft privacy policies covering GDPR, CCPA/CPRA, COPPA, LGPD, PIPEDA, and Privacy by Design |
 
 ---
 
@@ -170,6 +210,14 @@ cp -r skills/* .cursor/skills/ 2>/dev/null
 /analyze-feedback
 /improve-retention
 /optimize-funnel
+/iterate
+```
+
+**Setting up metrics and goals:**
+```
+/north-star
+/define-metrics
+/plan-okrs
 ```
 
 **Job search:**
@@ -178,6 +226,26 @@ cp -r skills/* .cursor/skills/ 2>/dev/null
 /tailor-resume
 /career-growth
 ```
+
+**Competitive analysis:**
+```
+/competitive-scan
+/profile-competitor Notion
+/battlecard
+```
+
+---
+
+## Skill Quality
+
+Every skill in this plugin follows a consistent quality standard:
+
+- Named frameworks with proper attribution (e.g., Teresa Torres, Geoffrey Moore, Reforge, Nielsen)
+- Detailed tables comparing approaches, with pros, cons, and when-to-use guidance
+- Worked examples with realistic numbers and scenarios
+- Anti-patterns section documenting common mistakes and why they fail
+- Structured output templates ready for stakeholder delivery
+- Typical skill length: 150 to 800+ lines of expert-level content
 
 ---
 
